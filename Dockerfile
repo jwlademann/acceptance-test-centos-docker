@@ -9,7 +9,7 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_4.x | bash - && \
     echo "export PATH=\$PATH:/opt/rh/rh-ruby22/root/usr/local/bin" >> /etc/profile.d/ruby22.sh && \
     source /etc/profile.d/ruby22.sh && \
     mkdir -p ~/.phantomjs/2.1.1/x86_64-linux && \
-    curl -O https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
+    curl -L -O https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
     tar xvfj phantomjs-2.1.1-linux-x86_64.tar.bz2 -C ~/.phantomjs/2.1.1/x86_64 && \
     yum groupinstall -y "Development Tools" && \
     yum install -y zlib-devel && \
