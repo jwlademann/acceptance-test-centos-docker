@@ -10,7 +10,7 @@ RUN curl --silent --location https://rpm.nodesource.com/setup_4.x | bash - && \
     source /etc/profile.d/ruby22.sh && \
     mkdir -p ~/.phantomjs/2.1.1/x86_64-linux && \
     curl -L -O https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2 && \
-    tar xvfj --strip 1 phantomjs-2.1.1-linux-x86_64.tar.bz2 -C ~/.phantomjs/2.1.1/x86_64 && \
+    tar xvfj phantomjs-2.1.1-linux-x86_64.tar.bz2 --strip 1 -C ~/.phantomjs/2.1.1/x86_64 && \
     yum groupinstall -y "Development Tools" && \
     yum install -y zlib-devel && \
     yum install -y zlib-devel freetype fontconfig && \
